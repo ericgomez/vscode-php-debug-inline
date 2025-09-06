@@ -4,7 +4,7 @@
   "description": "Shows PHP variable values inline during debugging.",
   "icon": "images/logo.png",
   "publisher": "ericgomez",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "engines": {
     "vscode": "^1.85.0"
@@ -28,11 +28,16 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "configurationDefaults": {
+      "debug.inlineValues": "auto"
+    },
     "debuggers": [
       {
         "type": "php-inline-debug",
         "label": "PHP Debug Inline",
-        "languages": ["php"]
+        "languages": [
+          "php"
+        ]
       }
     ]
   },
